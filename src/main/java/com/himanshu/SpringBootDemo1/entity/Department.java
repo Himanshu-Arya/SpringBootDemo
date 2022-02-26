@@ -1,15 +1,13 @@
 package com.himanshu.SpringBootDemo1.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "DEP_TABLE")
 public class Department {
     @Id
     @Column(name = "DEP_ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
     private String departmentName;
     private String departmentAddress;
